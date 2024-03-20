@@ -28,6 +28,7 @@
 		<dependency>
 			<groupId>org.liquibase</groupId>
 			<artifactId>liquibase-core</artifactId>
+			<version>4.21.0</version>
 		</dependency>
 
 		<dependency>
@@ -53,6 +54,15 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.liquibase</groupId>
+				<artifactId>liquibase-maven-plugin</artifactId>
+				<version>4.21.0</version> <!-- Liquibase versionunu güncelleyin -->
+				<configuration>
+					<propertyFile>src/main/resources/liquibase.properties</propertyFile>
+					<outputChangeLogFile>src/main/resources/db/changelog/db.changelog-master.xml</outputChangeLogFile>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
