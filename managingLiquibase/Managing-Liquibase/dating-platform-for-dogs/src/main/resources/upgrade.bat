@@ -1,0 +1,1 @@
+liquibase --driver=org.postgresql.Driver --changeLogFile=db-changelog.xml --url="jdbc:postgresql://localhost:5432/manageliquibase?currentSchema=dating" --username=webuser --password=aSecretPass update
